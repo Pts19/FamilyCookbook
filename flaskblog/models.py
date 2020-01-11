@@ -9,7 +9,7 @@ from flask_login import UserMixin
 def load_user(user_id):
     return User.query.get(int(user_id))
 
-
+#Simple User Model -> May add creation date, rolling post total, Karma??
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(20), unique=True, nullable=False)
@@ -23,7 +23,7 @@ class User(db.Model, UserMixin):
     #backref = basically new column for all posts by a user
     #'Post' -> actually reference class Post, not the table for posts
 
-    #3min expiration on token
+    #30min expiration on token
     def get_reset_token(self, expires_sec=1800):
         s = Serializer(app.config['SECRET_KEY'], expires_sec)
         return s.dumps({'user_id': self.id}).decode('utf-8')
