@@ -1,11 +1,12 @@
-from flaskblog import app
+from flaskblog import create_app
 #from project folder flaskblog, import object "app"
 #app used as application object to:
 #make changes to database, use serialization,
 #login manager, and encryption
 
+app = create_app()
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run(debug=True)
     #Always runs the flask server by running the module
     #instead of "export FLASK_APP=flaskblog.py"
