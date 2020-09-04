@@ -1,9 +1,7 @@
 {% extends "layouts.html" %}
 {% block content %}
-<strong>User -> Posts One-To-Many relationship may be broken</strong><br>
 <strong>TODO -> Add account creation date and print it on Account page</strong><br>
 <strong>TODO -> Add account about page: Date of account creation, num of Posts<br>
-                CONT -> Mod/RegUser/Admin? -> How Many Posts they have deleted/Updated?</strong><br>
 {% for post in posts.items %}
     <article class="media content-section">
       <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}">
