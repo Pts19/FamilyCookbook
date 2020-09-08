@@ -62,12 +62,12 @@
         <div class="col-md-4">
           <div class="content-section">
             <h3>Quick Links</h3>
-            <p class='text-muted'>Quick links for the most important things.
+            <p class='text-muted'>Click below for more dishes.
               <ul class="list-group">
-                <li class="list-group-item list-group-item-light">Top 5 Dishes</li>
-                <li class="list-group-item list-group-item-light">Chicken Dishes</li>
-                <li class="list-group-item list-group-item-light">Beef Dishes</li>
-                <li class="list-group-item list-group-item-light">Breakfast</li>
+                <a class="list-group-item list-group-item-light"  href="{{ url_for('dishes.top5') }}">Top 5 Dishes</a>
+                <a class="list-group-item list-group-item-light" href="{{ url_for('dishes.chicken') }}">Chicken Dishes</a>
+                <a class="list-group-item list-group-item-light" href="{{ url_for('dishes.beef') }}">Beef Dishes</a>
+                <a class="list-group-item list-group-item-light" href="{{ url_for('dishes.breakfast') }}">Breakfast</a>
               </ul>
             </p>
           </div>

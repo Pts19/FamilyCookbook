@@ -8,6 +8,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #444444;
 }
 
+#example2 {
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 5px 10px #888888;
+}
+
 .bg-steel {
   background-color: #5f788a;
 }
