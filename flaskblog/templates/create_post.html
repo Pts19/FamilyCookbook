@@ -19,6 +19,32 @@
                 {% endif %}
             </div>
             <div class="form-group">
+                {{ form.mealType.label(class="form-control-label") }}
+                {% if form.mealType.errors %}
+                    {{ form.mealType(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.mealType.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.mealType(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+            <div class="form-group">
+                {{ form.mainIngredient.label(class="form-control-label") }}
+                {% if form.mainIngredient.errors %}
+                    {{ form.mainIngredient(class="form-control form-control-lg is-invalid") }}
+                    <div class="invalid-feedback">
+                        {% for error in form.mainIngredient.errors %}
+                            <span>{{ error }}</span>
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    {{ form.mainIngredient(class="form-control form-control-lg") }}
+                {% endif %}
+            </div>
+            <div class="form-group">
                 {{ form.content.label(class="form-control-label") }}
                 {% if form.content.errors %}
                     {{ form.content(class="form-control form-control-lg is-invalid") }}

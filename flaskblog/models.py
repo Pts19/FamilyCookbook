@@ -18,6 +18,7 @@ class User(db.Model, UserMixin):
     image_file = db.Column(db.String(20), nullable=False, default='default.jpg')
     password = db.Column(db.String(60), nullable=False)
 
+
     #ONE TO MANY RELATIONSHIP INC \/
     posts = db.relationship('Post', backref='author', lazy=True)
     #Lazy-True???
@@ -47,9 +48,12 @@ class Post(db.Model):
     #date_posted = db.Column(db.DateTime, nullable=False,
                             #default=datetime.now(pytz.timezone('Chicago')))
     date_posted = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
+    mealType = db.Column(db.String(20), default="Dinner", nullable=True)
+    mainIngredient = db.Column(db.String(35), default="Chicken", nullable=True)
     content = db.Column(db.Text, nullable=False)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     #ForeignKey reference actually table for user, not User class
+
 
     def __repr__(self): #MAGIC METHOD FOR FORMATING LOOK UP RESEARCH
         return f"Post('{self.title}', '{self.date_posted}')"

@@ -22,7 +22,9 @@ posts = Blueprint('posts', __name__)
 def new_post():
     form = PostForm() #Object creation to act on the PostForm class
     if form.validate_on_submit():
-        post = Post(title=form.title.data, content=form.content.data, author=current_user)
+        post = Post(title=form.title.data, mealType=form.mealType.data,
+                    mainIngredient=form.mainIngredient.data,
+                    content=form.content.data, author=current_user)
         db.session.add(post)
         db.session.commit()
         flash('Your post has been created!', 'success')
@@ -69,6 +71,8 @@ def update_post(post_id):
     form = PostForm()
     if form.validate_on_submit():
         post.title = form.title.data
+        mealType = form.mealType.data,
+        mainIngredient =  form.mainIngredient.data
         post.content = form.content.data
         db.session.commit()
         flash('Your post has been updated!', 'success')
@@ -76,6 +80,8 @@ def update_post(post_id):
 
     elif request.method == 'GET':
         form.title.data = post.title
+        mealType = form.mealType.data,
+        mainIngredient = form.mainIngredient.data
         form.content.data = post.content
     """
         On GET request:

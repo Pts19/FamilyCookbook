@@ -18,7 +18,7 @@ dishes = Blueprint('dishes', __name__)
 def chicken():
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=3)
-    return render_template('home.html', posts=posts)
+    return render_template('dishes.html', posts=posts)
 
 """
     localhost:5000/about
@@ -27,7 +27,7 @@ def chicken():
 """
 @dishes.route('/top5')
 def top5():
-    return render_template('about.html', title='About')
+    return render_template('dishes.html', title='About')
 
 @dishes.route('/beef')
 def beef():
