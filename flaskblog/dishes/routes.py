@@ -27,7 +27,9 @@ def chicken():
 """
 @dishes.route('/top5')
 def top5():
-    return render_template('dishes.html', title='About')
+    page = request.args.get('page', 1, type=int)
+    posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=3)
+    return render_template('dishes.html', posts=posts)
 
 @dishes.route('/beef')
 def beef():
