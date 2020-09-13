@@ -3,22 +3,12 @@ from flaskblog.models import Post
 
 dishes = Blueprint('dishes', __name__)
 
-"""
-    localhost:5000/    or    localhost:5000/home
-    No get/post methods required
-
-    default page = 1
-    page = pageNumber from args.get()
-        -> http://127.0.0.1:5000/home?page=2
-           get all args after 'page' -> button clicks below posts
-    posts = all posts on page = X, posts per_page = 3
-        -> Sort all these posts by date_descending (newest posts first!)
-"""
 @dishes.route('/chicken')
 def chicken():
+    protein="chicken"
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=3)
-    return render_template('dishes.html', posts=posts)
+    return render_template('dishes.html', posts=posts, protein=protein)
 
 """
     localhost:5000/about
@@ -27,17 +17,22 @@ def chicken():
 """
 @dishes.route('/top5')
 def top5():
+    protein="Top 5"
     page = request.args.get('page', 1, type=int)
     posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=3)
-    return render_template('dishes.html', posts=posts)
+    return render_template('dishes.html', posts=posts, protein=protein)
 
 @dishes.route('/beef')
 def beef():
+    protein="beef"
+    page = request.args.get('page', 1, type=int)
+    posts = Post.query.order_by(Post.date_posted.desc()).paginate(page=page, per_page=3)
+    return render_template('dishes.html', posts=posts, protein=protein)
+
+@dishes.route('/dinner')
+def dinner():
     return render_template('about.html', title='About')
 
-@dishes.route('/breakfast')
-def breakfast():
-    return render_template('about.html', title='About')
 
 
-#endmain
+#enddishes

@@ -71,8 +71,8 @@ def update_post(post_id):
     form = PostForm()
     if form.validate_on_submit():
         post.title = form.title.data
-        mealType = form.mealType.data,
-        mainIngredient =  form.mainIngredient.data
+        post.mealType = form.mealType.data
+        post.mainIngredient = form.mainIngredient.data
         post.content = form.content.data
         db.session.commit()
         flash('Your post has been updated!', 'success')
@@ -80,8 +80,8 @@ def update_post(post_id):
 
     elif request.method == 'GET':
         form.title.data = post.title
-        mealType = form.mealType.data,
-        mainIngredient = form.mainIngredient.data
+        form.mealType.data = post.mealType
+        form.mainIngredient.data = post.mainIngredient
         form.content.data = post.content
     """
         On GET request:
