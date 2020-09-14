@@ -1,0 +1,74 @@
+{% extends "layouts.html" %}
+{% block content %}
+<h1 class="mb-3">Top 5 Dishes of All Time!</h1>
+<article class="media content-section">
+  <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post1.author.image_file) }}">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="{{ url_for('users.user_posts', username=post1.author.username) }}">{{ post1.author.username }}</a>
+      <small class="text-muted"> &nbsp;{{ post1.date_posted.strftime('%Y-%m-%d') }}</small>
+      <small class="text-muted"> &emsp;&nbsp; Tags:</small>
+      <b><small class="text-muted">{{ post1.mealType }}</small></b>
+      <b><small class="text-muted">{{ post1.mainIngredient }}</small></b>
+    </div>
+    <h2 class="article-title">{{ post1.title }}</h2>
+    <p class="article-content">{{ post1.content }}</p>
+  </div>
+</article>
+<article class="media content-section">
+  <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post2.author.image_file) }}">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="{{ url_for('users.user_posts', username=post2.author.username) }}">{{ post2.author.username }}</a>
+      <small class="text-muted"> &nbsp;{{ post2.date_posted.strftime('%Y-%m-%d') }}</small>
+      <small class="text-muted"> &emsp;&nbsp; Tags:</small>
+      <b><small class="text-muted">{{ post2.mealType }}</small></b>
+      <b><small class="text-muted">{{ post2.mainIngredient }}</small></b>
+    </div>
+    <h2 class="article-title">{{ post2.title }}</h2>
+    <p class="article-content">{{ post2.content }}</p>
+  </div>
+</article>
+<article class="media content-section">
+  <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post3.author.image_file) }}">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="{{ url_for('users.user_posts', username=post3.author.username) }}">{{ post3.author.username }}</a>
+      <small class="text-muted"> &nbsp;{{ post3.date_posted.strftime('%Y-%m-%d') }}</small>
+      <small class="text-muted"> &emsp;&nbsp; Tags:</small>
+      <b><small class="text-muted">{{ post3.mealType }}</small></b>
+      <b><small class="text-muted">{{ post3.mainIngredient }}</small></b>
+    </div>
+    <h2 class="article-title">{{ post3.title }}</h2>
+    <p class="article-content">{{ post3.content }}</p>
+  </div>
+</article>
+<article class="media content-section">
+  <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post4.author.image_file) }}">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="{{ url_for('users.user_posts', username=post4.author.username) }}">{{ post4.author.username }}</a>
+      <small class="text-muted"> &nbsp;{{ post4.date_posted.strftime('%Y-%m-%d') }}</small>
+      <small class="text-muted"> &emsp;&nbsp; Tags:</small>
+      <b><small class="text-muted">{{ post4.mealType }}</small></b>
+      <b><small class="text-muted">{{ post4.mainIngredient }}</small></b>
+    </div>
+    <h2 class="article-title">{{ post4.title }}</h2>
+    <p class="article-content">{{ post4.content }}</p>
+  </div>
+</article>
+<article class="media content-section">
+  <img class="rounded-circle article-img" src="{{ url_for('static', filename='profile_pics/' + post5.author.image_file) }}">
+  <div class="media-body">
+    <div class="article-metadata">
+      <a class="mr-2" href="{{ url_for('users.user_posts', username=post5.author.username) }}">{{ post5.author.username }}</a>
+      <small class="text-muted"> &nbsp;{{ post5.date_posted.strftime('%Y-%m-%d') }}</small>
+      <small class="text-muted"> &emsp;&nbsp; Tags:</small>
+      <b><small class="text-muted">{{ post5.mealType }}</small></b>
+      <b><small class="text-muted">{{ post5.mainIngredient }}</small></b>
+    </div>
+    <h2 class="article-title">{{ post5.title }}</h2>
+    <p class="article-content">{{ post5.content }}</p>
+  </div>
+</article>
+{% endblock content %}
