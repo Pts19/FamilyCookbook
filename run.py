@@ -1,8 +1,4 @@
 from flaskblog import create_app
-#from project folder flaskblog, import object "app"
-#app used as application object to:
-#make changes to database, use serialization,
-#login manager, and encryption
 
 app = create_app()
 
