@@ -2,7 +2,7 @@ import os
 from flask_sqlalchemy import SQLAlchemy
 #Import flask version of SQLAlchemy -> import specifically flask-SQLAlchemy
 
-class Config:    
+class Config:
     #SQLAlchemy which databse engine we are using - Flask - SQLAlchemy
     SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI')
     #Tell our web application specifically where our databse will be stored
