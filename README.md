@@ -1,4 +1,5 @@
-![My Family Cookbook Logo](https://raw.githubusercontent.com/Pts19/FlaskBlog/Attempt/familycookbloglogo.png)
+# [**www.patrick-sheehan.com**](www.patrick-sheehan.com)![My Family Cookbook Logo](https://raw.githubusercontent.com/Pts19/FlaskBlog/Attempt/familycookbloglogo.png)
+
 
 
 # My Family Cookbook
@@ -59,6 +60,10 @@ pip install -r req.txt
 - User Interface may be too simplistic and limited as I try to scale web-app to include more members.
 
 
+## Contact
+**Patrick Sheehan** -> [**patricksheehancs@gmail.com**](patricksheehancs@gmail.com)
+
+[**www.patrick-sheehan.com**](www.patrick-sheehan.com)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
