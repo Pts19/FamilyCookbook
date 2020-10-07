@@ -3,6 +3,7 @@
 # My Family Cookbook
 
 My Family Cookbook is a web application that helps connect my extended family that is spread out across the country. Anyone can create an account and start cataloging recipes for all to see. During the COVID-19 crisis this website has emboldened family connections, and sparked recipe sharing that spans thousands of miles. As an added side effect, recipes that are over 90 years old have been gathered and cataloged into a digital vault.
+
 ![My Family Cookbook Logo](https://raw.githubusercontent.com/Pts19/FlaskBlog/Attempt/familycookbloglogo.png)
 
 ## Table of contents
