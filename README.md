@@ -48,9 +48,14 @@ pip install -r req.txt
 
 
 ## Website Hosting
-Domain name was purchased using [**namecheap.com**]
+- **Domain name** was purchased using [**namecheap.com**](www.namecheap.com)
+- **Cloud Hosted** using [**Linode.com**](https://www.linode.com/) on a Ubuntu based virtual machine.
+- WSGI application server [**GUnicorn**](https://gunicorn.org/) - GUnicorn handles everything that happens in-between the web server and the web application. 
+- Web Sever [**Nginx**](https://www.nginx.com/) - This server handles requests and the general domain logic, plus the complicated HTTPs connections.
 
-Please make sure to update tests as appropriate.
+## Retrospective
+
+
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
