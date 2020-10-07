@@ -50,10 +50,13 @@ pip install -r req.txt
 ## Website Hosting
 - **Domain name** was purchased using [**namecheap.com**](www.namecheap.com)
 - **Cloud Hosted** using [**Linode.com**](https://www.linode.com/) on a Ubuntu based virtual machine.
-- WSGI application server [**GUnicorn**](https://gunicorn.org/) - GUnicorn handles everything that happens in-between the web server and the web application. 
-- Web Sever [**Nginx**](https://www.nginx.com/) - This server handles requests and the general domain logic, plus the complicated HTTPs connections.
+- **WSGI application server** [**GUnicorn**](https://gunicorn.org/) - GUnicorn handles everything that happens in-between the web server and the web application. 
+- Web Sever [**Nginx**](https://www.nginx.com/) - This server handles **requests** and the general **domain logic**, plus the complicated **HTTPs connections**.
 
 ## Retrospective
+- Must flesh out deaper CSS and HTML/Jinja2 markup skills. Too relient on BootStrap to manage fullstack apps.
+- Focus on commenting new code right as I write it. Old functions are messy and hard to comprehend without good comments.
+- User Interface may be too simplistic and limited as I try to scale web-app to include more members.
 
 
 
