@@ -1,4 +1,4 @@
-[**www.patrick-sheehan.com**](patrick-sheehan.com)
+[**www.patrick-sheehan.com**](http://patrick-sheehan.com/)
 
 # My Family Cookbook
 
